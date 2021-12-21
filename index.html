@@ -5,15 +5,13 @@
 
   <title>AD251_DZ-4</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Liste, Linkovi, Formatiranje teksta">
-  <meta name="keywords" content="Html5, paragrafi, linkovi">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
   <style>
     body {
+      color: whitesmoke;
 
-    color:whitesmoke;
       margin: 0 auto;
       width: 100%;
       height: 100%;
@@ -21,10 +19,12 @@
       padding: 0;
       background: black;
     }
-   a {
+
+    a {
       color: whitesmoke;
 
     }
+
     svg {
       position: absolute;
       width: 480px;
@@ -55,8 +55,33 @@
       transition-duration: 0.4s;
     }
 
-    svg:hover {
+    #preloader:hover {
       opacity: 0.4;
+    }
+
+    #orange-circle:hover {
+      opacity: 0.4;
+    }
+
+    #blue-rectangle:hover {
+      opacity: 0.4;
+    }
+
+    .svg2 {
+
+      display: block;
+      margin: 1em auto;
+      margin-bottom: 5em;
+    }
+
+    p {
+      color: #aaa;
+      text-align: center;
+      margin: 2em 0;
+    }
+
+    footer {
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -90,7 +115,17 @@
 
   </svg>
 
+  <svg class="svg2" width="500" height="350">
+    <circle id="orange-circle" r="30" cx="50" cy="50" fill="#F25022" />
+    <rect id="blue-rectangle" width="50" height="50" x="25" y="200" fill="#00A4EF"></rect>
 
+    <animate xlink:href=" #orange-circle" attributeName="cx" from="50" to="450" dur="5s" begin="0s"
+      repeatCount="indefinite" fill="freeze" id="circ-anim" />
+
+    <animate xlink:href="#blue-rectangle" attributeName="x" from="50" to="425" dur="5s" begin="0s"
+      repeatCount="indefinite" fill="freeze" id="rect-anim" />
+
+  </svg>
 
 
   <footer style="position: absolute;
@@ -100,8 +135,6 @@
   font-size:26px">
     <a href="https://github.com/Aleksandar4296" target="_blank">Aleksandar Github</a>
   </footer>
-
-
 
 
 
